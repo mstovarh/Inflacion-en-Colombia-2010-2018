@@ -1,0 +1,110 @@
+-------------
+CALCULOS DAX
+-------------
+Barranquilla:
+-------------
+KPI_BARRANQUILLA = MEDIAN(BARRANQUILLA11[VARIACION_ANUAL])
+..........
+Variación Anual Mínima Barranquilla = MIN('BARRANQUILLA11'[VARIACION_ANUAL])
+..........
+Variación Máxima Barranquilla = MAX('BARRANQUILLA11'[VARIACION_ANUAL])
+..........
+VARIACIÓN MÁXIMA DE BARRANQUILLA = 
+MAXX(
+    SUMMARIZE('BARRANQUILLA11', 'BARRANQUILLA11'[AÑO], "Max Variación Anual", MAX('BARRANQUILLA11'[VARIACION_ANUAL])),
+    [Max Variación Anual]
+)
+--------------
+Bogotá:
+--------------
+DESV BOGOTA = STDEV.P(BOGOTA10[VARIACION_ANUAL]) 
+..........
+Variación Máxima Bogota = MAX('BOGOTA10'[VARIACION_ANUAL])
+..........
+VARIACIÓN MÁXIMA DE BOGOTÁ = 
+MAXX(
+    SUMMARIZE('BOGOTA10', 'BOGOTA10'[AÑO], "Max Variación Anual", MAX('BOGOTA10'[VARIACION_ANUAL])),
+    [Max Variación Anual]
+)
+..........
+Variación Mínima Bogota = MIN('BOGOTA10'[VARIACION_ANUAL])
+--------------
+Cali:
+--------------
+DESV CALI = STDEV.P(CALI9[VARIACION_ANUAL]) 
+..........
+Variación Máxima Cali = MAX('CALI9'[VARIACION_ANUAL])
+..........
+Variación Mínima Cali = MIN('CALI9'[VARIACION_ANUAL])
+--------------
+Cartagena:
+--------------
+KPI_CARTAGENA = MEDIAN(CARTAGENA8[VARIACION_ANUAL])
+..........
+RMAX = MAXX('CARTAGENA8', 'CARTAGENA8'[VARIACION_ANUAL])
+..........
+RMIN = MINX('CARTAGENA8', 'CARTAGENA8'[VARIACION_ANUAL])
+..........
+Variación Anual Mínima Cartagena = MIN('CARTAGENA8'[VARIACION_ANUAL])
+..........
+Variación Máxima Cartagena = MAX('CARTAGENA8'[VARIACION_ANUAL])
+--------------
+IPC:
+--------------
+DESVIACION IPC = STDEV.P(IPC1[IPC]) 
+..........
+IPC MAX = MAX('IPC1'[IPC])
+..........
+IPC MIN = MIN('IPC1'[IPC])
+..........
+KPI_IPC = 120
+..........
+RMAX_IPC = MAXX('IPC1', 'IPC1'[IPC])
+..........
+RMIN_IPC = MINX('IPC1', 'IPC1'[IPC])
+..........
+VARIANZA IPC = VAR.P(IPC1[IPC]) 
+--------------
+Manizales:
+--------------
+DESV MANIZALES = STDEV.P(MANIZALES7[VARIACION_ANUAL]) 
+..........
+Variación Máxima Manizales = MAX('MANIZALES7'[VARIACION_ANUAL])
+..........
+Variación Mínima Manizales = MIN('MANIZALES7'[VARIACION_ANUAL])
+--------------
+Medellín:
+--------------
+DESV MEDELLIN = STDEV.P(MEDELLIN6[VARIACION_ANUAL]) 
+..........
+Variación Máxima Medellin = MAX('MEDELLIN6'[VARIACION_ANUAL])
+..........
+Variación Mínima Medellin = MIN('MEDELLIN6'[VARIACION_ANUAL])
+--------------
+Riohacha:
+--------------
+Variación Anual Mínima Riohacha = MIN('RIOHACHA5'[VARIACION_ANUAL])
+..........
+Variación Máxima Riohacha = MAX('RIOHACHA5'[VARIACION_ANUAL])
+--------------
+Santa Marta:
+--------------
+Variación Anual Mínima Santa Marta = MIN('SANTA_MARTA'[VARIACION_ANUAL])
+..........
+Variación Máxima Santa Marta = MAX('SANTA_MARTA'[VARIACION_ANUAL])
+--------------
+VA:
+--------------
+DESV VA = STDEV.P(VA2[VARIACION_ANUAL]) 
+..........
+VA MAX = MAX('VA2'[VARIACION_ANUAL])
+..........
+VA MIN = MIN('VA2'[VARIACION_ANUAL])
+--------------
+VM:
+--------------
+DESV VM = STDEV.P(VM4neg[VARIACION_MENSUAL]) 
+..........
+VM MAX = MAX(VM4[VARIACION_MENSUAL])
+..........
+VM MIN = MIN('VA2'[VARIACION_ANUAL])
